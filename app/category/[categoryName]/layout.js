@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import GetTouch from "@/components/GetTouch";
 import Sidebar from "@/components/Sidebar";
 
 const CategoryLayout = ({ children }) => {
@@ -10,6 +12,8 @@ const CategoryLayout = ({ children }) => {
 
           {children}
         </section>
+        <GetTouch />
+        <Footer />
       </main>
     </div>
   );
