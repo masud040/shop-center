@@ -3,9 +3,8 @@ import { getProductById } from "@/utils";
 
 const ProductDetails = ({ params: { id } }) => {
   const product = getProductById(Number(id));
-  console.log(product);
 
-  return <ProductDetailsPage />;
+  return <ProductDetailsPage productDetails={product} />;
 };
 
 export default ProductDetails;

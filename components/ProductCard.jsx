@@ -13,7 +13,8 @@ const ProductCard = ({ productDetails }) => {
     thumbnail,
     images,
   } = productDetails;
-  const mainPrice = price - discountPercentage;
+  const discount = price * (discountPercentage / 100);
+  const mainPrice = price - discount;
 
   return (
     <div>
