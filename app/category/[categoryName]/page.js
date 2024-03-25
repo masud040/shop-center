@@ -1,5 +1,12 @@
 import ProductCard from "@/components/ProductCard";
-import { getProductsByCategory } from "@/utils";
+import { getAllCategory, getProductsByCategory } from "@/utils";
+
+export async function generateStaticParams() {
+  const allCategory = getAllCategory();
+  return allCategory?.map((category) => ({
+    categoryName: category,
+  }));
+}
 
 const CategoryDetails = ({ params: { categoryName } }) => {
   const matchesProduct = getProductsByCategory(categoryName);

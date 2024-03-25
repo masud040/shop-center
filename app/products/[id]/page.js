@@ -1,5 +1,12 @@
 import ProductDetailsPage from "@/components/ProductDetailsPage";
-import { getProductById } from "@/utils";
+import { getProductById, getProducts } from "@/utils";
+
+export async function generateStaticParams() {
+  const allProducts = getProducts();
+  return allProducts?.map((product) => ({
+    id: product.id.toString(),
+  }));
+}
 
 const ProductDetails = ({ params: { id } }) => {
   const product = getProductById(Number(id));
