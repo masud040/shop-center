@@ -6,8 +6,8 @@ const GetTouch = () => {
           Get the inside scoop
         </h1>
         <p class="text-center text-sm lg:text-base">
-          Sign up for new product drops, behind-the-scenes content, and monthly
-          "5 Things I'm Digging" emails
+          {`Sign up for new product drops, behind-the-scenes content, and monthly 
+          "5 Things I'm Digging" emails`}
         </p>
         <form action="#" class="mb-5">
           <input
