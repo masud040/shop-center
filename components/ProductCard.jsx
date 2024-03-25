@@ -20,7 +20,7 @@ const ProductCard = ({ productDetails }) => {
     <div>
       <div
         style={{ backgroundImage: `url(${thumbnail})` }}
-        className={`relative delay-150 w-180px lg:w-[270px] h-[205px] lg:h-[310px] bg-[#f8f8f8] bg-center transition-all duration-3000 ease-in-out transform`}
+        className={`relative delay-150 w-180px lg:w-full h-[205px] lg:h-[310px] bg-[#f8f8f8] bg-center transition-all duration-3000 ease-in-out transform`}
       ></div>
       <h2 className="mt-2 text-sm lg:text-base">
         <Link className="text-base font-bold" href={`/products/${id}`}>

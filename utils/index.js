@@ -26,6 +26,14 @@ export function getAllCategory() {
   }
   return arr;
 }
+export function getProductsByCategory(category) {
+  if (productList && productList?.products) {
+    return productList?.products.filter(
+      (product) => product.category == category
+    );
+  }
+  return [];
+}
 
 export function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
