@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import CustomImageSlider from "./CustomImageSlider";
 
 const ProductDetailsPage = ({ productDetails }) => {
@@ -9,12 +10,11 @@ const ProductDetailsPage = ({ productDetails }) => {
     price,
     discountPercentage,
     rating,
-    stock,
-    brand,
     category,
     thumbnail,
     images,
   } = productDetails || {};
+
   const discount = price * (discountPercentage / 100);
   const mainPrice = price - discount;
   const ratings = [...Array(Math.round(rating)).keys()];
@@ -27,7 +27,12 @@ const ProductDetailsPage = ({ productDetails }) => {
             <h1 className="font-serif text-xl italic font-semibold lg:text-3xl">
               {title}
             </h1>
-            <span className="text-[#919090] my-3">{category}</span>
+            <Link
+              href={`/category/${category}`}
+              className="text-[#919090] my-3"
+            >
+              {category}
+            </Link>
             <div className="flex items-center justify-start gap-1 mt-3">
               {ratings?.map((ind) => (
                 <Image

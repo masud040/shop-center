@@ -27,7 +27,7 @@ const ProductCard = ({ productDetails }) => {
           {title}
         </Link>
         <span class="text-[#919090]">
-          <Link href="./category.html">({category})</Link>
+          <Link href={`/category/${category}`}>({category})</Link>
         </span>
       </h2>
       <p class="text-[#919090] text-sm ">{description}</p>

@@ -15,3 +15,6 @@ export function getProductById(id) {
     return {};
   }
 }
+export function getAllCategory() {
+  const arr = [];
+}
